@@ -8,11 +8,11 @@ const scan = async () => {
     console.log(`DEBUG: actionPath: ${actionPath}`);
 
     if (option === 'start'){
-        await exec.exec('./_actions/ebadusb-sonarqube@v1.24/start-sonarqube.ps1');
+        await exec.exec('./.github/actions/sonarqube/start-sonarqube.ps1');
     } 
     
     if (option === 'stop'){
-        await exec.exec('./_actions/ebadusb-sonarqube@v1.24/stop-sonarqube.ps1');
+        await exec.exec('./.github/actions/sonarqube/stop-sonarqube.ps1');
     }
 
 }
