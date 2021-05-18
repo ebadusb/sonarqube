@@ -1,13 +1,13 @@
 const core      = require('@actions/core');
 const exec      = require('@actions/exec');
 const github    = require('@actions/github');
-const io        = require('@actions/io');
 
 const scan = async () => {
     const buildScript = core.getInput('option');
     console.log(`DEBUG: opt: ${buildScript}`);
     console.log("Debug: About to start scan");
-    await exec.exec('./_actions/ebadusb-sonarqube@v1.21/start-sonarqube.ps1');
+    await exec.exec('./_actions/ebadusb-sonarqube@v1.22/start-sonarqube.ps1');
+    // await exec.exec('./_actions/ebadusb-sonarqube@v1.22/stop-sonarqube.ps1');
 }
 
 try {

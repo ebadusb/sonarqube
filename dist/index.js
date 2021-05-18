@@ -7252,13 +7252,13 @@ var __webpack_exports__ = {};
 const core      = __nccwpck_require__(810);
 const exec      = __nccwpck_require__(235);
 const github    = __nccwpck_require__(176);
-const io        = __nccwpck_require__(913);
 
 const scan = async () => {
     const buildScript = core.getInput('option');
     console.log(`DEBUG: opt: ${buildScript}`);
     console.log("Debug: About to start scan");
-    await exec.exec('./_actions/ebadusb-sonarqube@v1.21/start-sonarqube.ps1');
+    await exec.exec('./_actions/ebadusb-sonarqube@v1.22/start-sonarqube.ps1');
+    // await exec.exec('./_actions/ebadusb-sonarqube@v1.22/stop-sonarqube.ps1');
 }
 
 try {
