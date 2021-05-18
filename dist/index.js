@@ -7256,7 +7256,7 @@ const io        = __nccwpck_require__(913);
 
 const scan = async () => {
     const buildScript = core.getInput('opt');
-    console.log(`DEBUG: opt: ${opt}`);
+    console.log(`DEBUG: opt: ${option}`);
     console.log("Debug: About to start scan");
     await exec.exec('./_actions/ebadusb-sonarqube@v1.19/start-sonarqube.ps1');
 }

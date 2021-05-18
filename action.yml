@@ -1,7 +1,7 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'SonarQube'
+description: 'Run dotnet scans'
 inputs:
-  opt:  
+  option:  
     description: 'start or stop dotnet scan'
     required: true
     default: 'start' 
