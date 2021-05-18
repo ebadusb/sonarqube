@@ -7,7 +7,7 @@ const scan = async () => {
     console.log("Debug: About to start scan");
     await io.cp('./_actions/ebadusb-sonarqube@v1.13/start-sonarqube.ps1', '../HelloWorld/start-sonarqube.ps1');
     await exec.exec('ls ../HelloWorld');
-    await exec.exec('start-sonarqube.ps1');
+    await exec.exec('../start-sonarqube.ps1');
 }
 
 try {
