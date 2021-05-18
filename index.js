@@ -7,7 +7,7 @@ const scan = async () => {
     const buildScript = core.getInput('opt');
     console.log(`DEBUG: opt: ${opt}`);
     console.log("Debug: About to start scan");
-    await exec.exec('./_actions/ebadusb-sonarqube@latest/start-sonarqube.ps1');
+    await exec.exec('./_actions/ebadusb-sonarqube@v1.19/start-sonarqube.ps1');
 }
 
 try {
