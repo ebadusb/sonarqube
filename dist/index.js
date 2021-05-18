@@ -7249,12 +7249,15 @@ module.exports = require("zlib");;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(810);
-const exec = __nccwpck_require__(235);
-const github = __nccwpck_require__(176);
+const core      = __nccwpck_require__(810);
+const exec      = __nccwpck_require__(235);
+const github    = __nccwpck_require__(176);
+const io        = __nccwpck_require__(913);
 
 const scan = async () => {
     console.log("Debug: About to start scan");
+    // await io.cp('start-sonarqube.ps1', );
+    await exec.exec('ls ../../..');
     await exec.exec('start-sonarqube.ps1');
 }
 
