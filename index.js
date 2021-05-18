@@ -4,7 +4,7 @@ const github    = require('@actions/github');
 
 const scan = async () => {
     const option = core.getInput('option');
-    const actionPath = process.env.GITHUB.ACTION_PATH;
+    const actionPath = process.env['GITHUB_PATH'];
     console.log(`DEBUG: actionPath: ${actionPath}`);
 
     if (option === 'start'){
