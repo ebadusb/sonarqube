@@ -7256,7 +7256,7 @@ const io        = __nccwpck_require__(913);
 
 const scan = async () => {
     console.log("Debug: About to start scan");
-    await io.cp('start-sonarqube.ps1', '../start-sonarqube.ps1');
+    // await io.cp('start-sonarqube.ps1', '../start-sonarqube.ps1');
     await exec.exec('ls ../');
     // await exec.exec('start-sonarqube.ps1');
 }
