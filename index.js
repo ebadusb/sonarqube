@@ -2,10 +2,14 @@ const core = require('@actions/core');
 const exec = require('@actions/exec');
 const github = require('@actions/github');
 
+const scan = async () => {
+    console.log("Debug: About to start scan");
+    await exec.exec('start-sonarqube.ps1');
+}
+
 try {
  
-  console.log("Debug: About to start scan");
-  await exec.exec('start-sonarqube.ps1');
+  scan();
  
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
