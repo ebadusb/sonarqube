@@ -4,9 +4,7 @@ const github    = require('@actions/github');
 
 const scan = async () => {
     const option = core.getInput('option');
-    const actionPath = process.env['GITHUB_PATH'];
-    console.log(`DEBUG: actionPath: ${actionPath}`);
-
+   
     if (option === 'start'){
         await exec.exec('./.github/actions/sonarqube/start-sonarqube.ps1');
     } 
