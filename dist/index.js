@@ -7255,6 +7255,8 @@ const github    = __nccwpck_require__(176);
 
 const scan = async () => {
     const option = core.getInput('option');
+    const actionPath = process.env.GITHUB.ACTION_PATH;
+    console.log(`DEBUG: actionPath: ${actionPath}`);
 
     if (option === 'start'){
         await exec.exec('./_actions/ebadusb-sonarqube@v1.23/start-sonarqube.ps1');
