@@ -7255,9 +7255,7 @@ const github    = __nccwpck_require__(176);
 
 const scan = async () => {
     const option = core.getInput('option');
-    const actionPath = process.env['GITHUB_PATH'];
-    console.log(`DEBUG: actionPath: ${actionPath}`);
-
+   
     if (option === 'start'){
         await exec.exec('./.github/actions/sonarqube/start-sonarqube.ps1');
     } 
@@ -7272,9 +7270,9 @@ try {
  
   scan();
  
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
+    // Get the JSON webhook payload for the event that triggered the workflow
+    //    const payload = JSON.stringify(github.context.payload, undefined, 2)
+    //   console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
