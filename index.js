@@ -3,14 +3,27 @@ const exec      = require('@actions/exec');
 const github    = require('@actions/github');
 
 const scan = async () => {
-    const option = core.getInput('option');
+
+    let output = '';
+    let error = '';
+
+    const options = {};
+    options.listeners = {
+    stdout: (data) => {
+      output += data.toString();
+    },
+    stderr: (data) => {
+      error += data.toString();
+    }
+    };
+    const inputOption = core.getInput('option');
    
-    if (option === 'start'){
-        await exec.exec('./.github/actions/sonarqube/start-sonarqube.ps1');
+    if (inputOption === 'start'){
+        await exec.exec('./.github/actions/sonarqube/start-sonarqube.ps1', options);
     } 
     
-    if (option === 'stop'){
-        await exec.exec('./.github/actions/sonarqube/stop-sonarqube.ps1');
+    if (inputOption === 'stop'){
+        await exec.exec('./.github/actions/sonarqube/stop-sonarqube.ps1', options);
     }
 
 }

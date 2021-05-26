@@ -50,3 +50,4 @@ if($null -ne $sonarqubeToken){
 			Pop-Location		
 		  }
 	}
+Exit $LASTEXITCODE
